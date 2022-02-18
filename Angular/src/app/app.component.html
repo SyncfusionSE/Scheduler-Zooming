@@ -1,0 +1,29 @@
+<div class="control-section">
+  <div class="col-lg-9 content-wrapper">
+  <div>
+  <button ejs-button (click)="onZoomIn()">Zoom In(-)</button>
+  <button ejs-button (click)="onZoomOut()">Zoom Out(+)</button>
+</div>
+<br />
+    <ejs-schedule #schedule width='100%' height='550px' [(selectedDate)]="selectedDate" [eventSettings]="eventSettings" currentView="TimelineMonth"
+    cssClass='schedule-cell-dimension'>
+    <e-views>
+      <e-view option="TimelineDay" [interval]="dayInterval"></e-view>
+      <e-view option="TimelineWeek" [interval]="weekInterval"></e-view>
+     <e-view option="TimelineMonth"></e-view>
+  </e-views>
+  <e-header-rows>
+  <e-header-row option='Month'></e-header-row>
+  <e-header-row option='Date'></e-header-row>
+  <e-header-row option='Hour'></e-header-row>
+  
+</e-header-rows>
+<ng-template #timeScaleMajorSlotTemplate let-data> 
+<div class="majorTime">{{getMajorTime(data.date)}}</div> 
+</ng-template> 
+<ng-template #timeScaleMinorSlotTemplate let-data> 
+<div class="minorTime">{{getMinorTime(data.date)}}</div> 
+</ng-template> 
+    </ejs-schedule>
+  </div>
+</div>
