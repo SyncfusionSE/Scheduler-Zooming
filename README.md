@@ -32,7 +32,7 @@ npm run start
 ```
 npm run start
 ```
-* #### React
+* #### Vue
 
 ```
 npm run serve
