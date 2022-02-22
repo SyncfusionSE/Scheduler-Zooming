@@ -1,6 +1,6 @@
-# TimeScale
+# Scheduler Zooming
 
-A custom sample using Syncfusion EJ2 Linear Gauge control to show the timeline.
+A custom sample for Syncfusion EJ2 Scheduler zooming functionality.
 
 ## Installing
 
